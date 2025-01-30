@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_activities",
+  "info": {
+    "singularName": "user-activity",
+    "pluralName": "user-activities",
+    "displayName": "User Activity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "referral_id": {
+      "type": "string"
+    },
+    "activity_details": {
+      "type": "json"
+    },
+    "activity_type": {
+      "type": "enumeration",
+      "enum": [
+        "game",
+        "social",
+        "referrals",
+        "twitter_post",
+        "inject",
+        "telegram",
+        "email",
+        "video",
+        "credit",
+        "multi",
+        "input_verification",
+        "upload_video",
+        "private_campaign",
+        "daily_visit",
+        "home_shortcut"
+      ]
+    },
+    "kelp_allocated": {
+      "type": "float",
+      "default": 0
+    },
+    "kelp_points": {
+      "type": "integer",
+      "default": 0
+    },
+    "kelp_trophies": {
+      "type": "float",
+      "default": 0
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_activity"
+    }
+  }
+}
