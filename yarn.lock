@@ -769,6 +769,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.1.tgz#d1145bf2c20132d6400495d6df4bf59362fd9d56"
@@ -829,9 +832,13 @@
   dependencies:
     "@eslint/core" "^0.10.0"
     levn "^0.4.1"
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4aa237f (Add linting and formatting configuration)
+=======
+
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 "@ethereumjs/rlp@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@ethereumjs/rlp/-/rlp-4.0.1.tgz#626fabfd9081baab3d0a3074b0c7ecaf674aaa41"
@@ -1032,6 +1039,7 @@
     "@ethersproject/properties" "^5.7.0"
     "@ethersproject/strings" "^5.7.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 754fccf (Add Moralis Web3 library to project dependencies)
 =======
 =======
@@ -1097,6 +1105,8 @@
     levn "^0.4.1"
 >>>>>>> cf68e14 (Add linting and formatting configuration)
 >>>>>>> 4aa237f (Add linting and formatting configuration)
+=======
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 
 "@floating-ui/core@^1.6.0":
   version "1.6.9"
@@ -5958,13 +5968,20 @@ estraverse@^5.1.0, estraverse@^5.2.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 esutils@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4aa237f (Add linting and formatting configuration)
+=======
+
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 ethereum-bloom-filters@^1.0.6:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/ethereum-bloom-filters/-/ethereum-bloom-filters-1.2.0.tgz#8294f074c1a6cbd32c39d2cc77ce86ff14797dab"
@@ -6022,6 +6039,7 @@ ethjs-unit@0.1.6:
     bn.js "4.11.6"
     number-to-bn "1.7.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 754fccf (Add Moralis Web3 library to project dependencies)
 =======
 =======
@@ -6031,6 +6049,8 @@ esutils@^2.0.2:
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 >>>>>>> cf68e14 (Add linting and formatting configuration)
 >>>>>>> 4aa237f (Add linting and formatting configuration)
+=======
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 
 events@^3.2.0:
   version "3.3.0"
@@ -10818,6 +10838,7 @@ strip-final-newline@^2.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
@@ -10825,6 +10846,8 @@ strip-json-comments@^3.1.1:
 =======
 =======
 >>>>>>> 4aa237f (Add linting and formatting configuration)
+=======
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 strip-hex-prefix@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/strip-hex-prefix/-/strip-hex-prefix-1.0.0.tgz#0c5f155fef1151373377de9dbb588da05500e36f"
@@ -10832,15 +10855,22 @@ strip-hex-prefix@1.0.0:
   dependencies:
     is-hex-prefixed "1.0.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 754fccf (Add Moralis Web3 library to project dependencies)
 =======
 =======
+=======
+
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
+<<<<<<< HEAD
 >>>>>>> cf68e14 (Add linting and formatting configuration)
 >>>>>>> 4aa237f (Add linting and formatting configuration)
+=======
+>>>>>>> 984ea78 (Add Moralis Web3 library to project dependencies)
 
 strip-json-comments@~2.0.1:
   version "2.0.1"
