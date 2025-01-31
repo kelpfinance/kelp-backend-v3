@@ -98,6 +98,14 @@
       "relation": "oneToOne",
       "target": "api::tma-user.tma-user",
       "mappedBy": "user"
+    },
+    "user_id": {
+      "type": "customField",
+      "options": {
+        "uuid-format": "^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$"
+      },
+      "customField": "plugin::strapi-advanced-uuid.uuid",
+      "required": true
     }
   }
 }

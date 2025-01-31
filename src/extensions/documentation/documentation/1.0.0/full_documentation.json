@@ -16,6 +16,7 @@
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "x-generation-date": "2025-01-31T01:52:28.275Z"
 =======
     "x-generation-date": "2025-01-31T00:28:41.437Z"
@@ -23,6 +24,9 @@
 =======
     "x-generation-date": "2025-01-31T00:43:38.619Z"
 >>>>>>> 3cf57c3 (Add TMA user info content type with related schema and documentation)
+=======
+    "x-generation-date": "2025-01-31T00:49:25.308Z"
+>>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
   },
   "x-strapi-config": {
     "plugins": [
@@ -3326,6 +3330,9 @@
                   }
                 }
               },
+              "user_id": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -4328,6 +4335,9 @@
                     }
                   }
                 }
+              },
+              "user_id": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",

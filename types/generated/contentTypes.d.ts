@@ -851,8 +851,30 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
       'api::tma-user.tma-user'
     >;
     updatedAt: Schema.Attribute.DateTime;
+<<<<<<< HEAD
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
+=======
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user_activity: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::user-activity.user-activity'
+    >;
+    user_id: Schema.Attribute.UID<
+      undefined,
+      {
+        'uuid-format': '^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$';
+      }
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'uuid-format': '^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$';
+        }
+      >;
+>>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
