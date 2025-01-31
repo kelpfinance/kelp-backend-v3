@@ -111,16 +111,22 @@
       "customField": "plugin::strapi-advanced-uuid.uuid",
       "required": true
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
     },
     "web_3": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::web3.web3",
       "mappedBy": "users_permissions_user"
+<<<<<<< HEAD
 =======
 >>>>>>> 60ce46c (Add TMA user info content type with related schema and documentation)
 =======
 >>>>>>> 59e140d (Add advanced UUID custom field to user schema)
+=======
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
     }
   }
 }

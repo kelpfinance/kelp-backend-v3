@@ -874,11 +874,15 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
 =======
+=======
+>>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
@@ -896,7 +900,12 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
 >>>>>>> 4aa237f (Add linting and formatting configuration)
 =======
 >>>>>>> 59e140d (Add advanced UUID custom field to user schema)
+<<<<<<< HEAD
 >>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
+=======
+=======
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
+>>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
     user_id: Schema.Attribute.UID<
       undefined,
       {
@@ -911,13 +920,21 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
         }
       >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
 =======
+=======
+>>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
 <<<<<<< HEAD
 =======
 >>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
 >>>>>>> 59e140d (Add advanced UUID custom field to user schema)
+<<<<<<< HEAD
 >>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
+=======
+=======
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
+>>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &

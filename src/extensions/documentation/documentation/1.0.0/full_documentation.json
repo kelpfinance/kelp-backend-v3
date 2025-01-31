@@ -22,6 +22,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "x-generation-date": "2025-01-31T01:52:28.275Z"
 =======
     "x-generation-date": "2025-01-31T00:28:41.437Z"
@@ -45,6 +46,8 @@
     "x-generation-date": "2025-01-31T02:00:10.465Z"
 >>>>>>> 7dc98c5 (Add TMA user info content type with related schema and documentation)
 =======
+=======
+>>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
     "x-generation-date": "2025-01-31T02:00:10.465Z"
 =======
 <<<<<<< HEAD
@@ -53,7 +56,13 @@
     "x-generation-date": "2025-01-31T00:49:25.308Z"
 >>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
 >>>>>>> 59e140d (Add advanced UUID custom field to user schema)
+<<<<<<< HEAD
 >>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
+=======
+=======
+    "x-generation-date": "2025-01-31T01:57:57.264Z"
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
+>>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
   },
   "x-strapi-config": {
     "plugins": [
@@ -3867,6 +3876,9 @@
                 "type": "string"
               },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
               "web_3": {
                 "type": "object",
                 "properties": {
@@ -3943,8 +3955,11 @@
                   }
                 }
               },
+<<<<<<< HEAD
 =======
 >>>>>>> 59e140d (Add advanced UUID custom field to user schema)
+=======
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -4952,6 +4967,9 @@
                 "type": "string"
               },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
               "web_3": {
                 "type": "object",
                 "properties": {
@@ -5028,8 +5046,11 @@
                   }
                 }
               },
+<<<<<<< HEAD
 =======
 >>>>>>> 59e140d (Add advanced UUID custom field to user schema)
+=======
+>>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
