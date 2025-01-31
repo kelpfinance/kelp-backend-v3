@@ -884,6 +884,7 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
 =======
@@ -906,6 +907,8 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
 =======
 >>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
 >>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
+=======
+>>>>>>> 2ea035a (resolve confilict)
     user_id: Schema.Attribute.UID<
       undefined,
       {
@@ -919,6 +922,7 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
           'uuid-format': '^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$';
         }
       >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
@@ -935,6 +939,8 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
 =======
 >>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
 >>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
+=======
+>>>>>>> 2ea035a (resolve confilict)
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &

@@ -23,6 +23,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "x-generation-date": "2025-01-31T01:52:28.275Z"
 =======
     "x-generation-date": "2025-01-31T00:28:41.437Z"
@@ -63,6 +64,9 @@
     "x-generation-date": "2025-01-31T01:57:57.264Z"
 >>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
 >>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
+=======
+    "x-generation-date": "2025-01-31T02:01:01.989Z"
+>>>>>>> 2ea035a (resolve confilict)
   },
   "x-strapi-config": {
     "plugins": [
@@ -3875,10 +3879,6 @@
               "user_id": {
                 "type": "string"
               },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
               "web_3": {
                 "type": "object",
                 "properties": {
@@ -3955,11 +3955,6 @@
                   }
                 }
               },
-<<<<<<< HEAD
-=======
->>>>>>> 59e140d (Add advanced UUID custom field to user schema)
-=======
->>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -4966,10 +4961,6 @@
               "user_id": {
                 "type": "string"
               },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
               "web_3": {
                 "type": "object",
                 "properties": {
@@ -5046,11 +5037,6 @@
                   }
                 }
               },
-<<<<<<< HEAD
-=======
->>>>>>> 59e140d (Add advanced UUID custom field to user schema)
-=======
->>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
