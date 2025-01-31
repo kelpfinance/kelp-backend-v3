@@ -350,45 +350,35 @@ export interface ApiTmaUserTmaUser extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    battlepass_streak: Schema.Attribute.BigInteger &
-      Schema.Attribute.DefaultTo<'0'>;
+    battlepass_streak: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
     battlepasses: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
     createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    daily_battlepasses: Schema.Attribute.BigInteger &
-      Schema.Attribute.DefaultTo<'0'>;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    daily_battlepasses: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
     last_time_accessed: Schema.Attribute.DateTime;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::tma-user.tma-user'
-    > &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tma-user.tma-user'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    referral_battlepasses: Schema.Attribute.BigInteger &
-      Schema.Attribute.DefaultTo<'0'>;
+    referral_battlepasses: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
     tma_user_name: Schema.Attribute.String;
-    total_kelp_points: Schema.Attribute.BigInteger &
-      Schema.Attribute.DefaultTo<'0'>;
-    total_kelp_trophies: Schema.Attribute.Integer &
-      Schema.Attribute.DefaultTo<0>;
-    total_reserved_token: Schema.Attribute.Float &
-      Schema.Attribute.DefaultTo<0>;
+    total_kelp_points: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    total_kelp_trophies: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    total_reserved_token: Schema.Attribute.Float & Schema.Attribute.DefaultTo<0>;
     updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    user: Schema.Attribute.Relation<
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<'oneToOne', 'plugin::users-permissions.user'>;
     user_level: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
   };
 }
 
+<<<<<<< HEAD
 export interface ApiUserActivityUserActivity
   extends Struct.CollectionTypeSchema {
 >>>>>>> 3cf57c3 (Add TMA user info content type with related schema and documentation)
+=======
+export interface ApiUserActivityUserActivity extends Struct.CollectionTypeSchema {
+>>>>>>> 4aa237f (Add linting and formatting configuration)
   collectionName: 'user_activities';
   info: {
     description: '';
@@ -451,26 +441,25 @@ export interface ApiWeb3Web3 extends Struct.CollectionTypeSchema {
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::web3.web3'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    users_permissions_user: Schema.Attribute.Relation<
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    users_permissions_user: Schema.Attribute.Relation<'oneToOne', 'plugin::users-permissions.user'>;
     wallet: Schema.Attribute.String;
   };
 }
 
+<<<<<<< HEAD
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
 >>>>>>> 9253f1f (Add Web3 content type with wallet integration and Moralis initialization)
+=======
+export interface PluginContentReleasesRelease extends Struct.CollectionTypeSchema {
+>>>>>>> 4aa237f (Add linting and formatting configuration)
   collectionName: 'strapi_releases';
   info: {
     displayName: 'Release';
@@ -880,11 +869,9 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
     role: Schema.Attribute.Relation<'manyToOne', 'plugin::users-permissions.role'>;
     tg_user_id: Schema.Attribute.String;
-    tma_user_info: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::tma-user.tma-user'
-    >;
+    tma_user_info: Schema.Attribute.Relation<'oneToOne', 'api::tma-user.tma-user'>;
     updatedAt: Schema.Attribute.DateTime;
+<<<<<<< HEAD
 <<<<<<< HEAD
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
@@ -895,6 +882,10 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
       'oneToOne',
       'api::user-activity.user-activity'
     >;
+=======
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
+>>>>>>> 4aa237f (Add linting and formatting configuration)
     user_id: Schema.Attribute.UID<
       undefined,
       {

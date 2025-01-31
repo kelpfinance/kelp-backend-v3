@@ -18,6 +18,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "x-generation-date": "2025-01-31T01:52:28.275Z"
 =======
     "x-generation-date": "2025-01-31T00:28:41.437Z"
@@ -31,6 +32,9 @@
 =======
     "x-generation-date": "2025-01-31T01:44:30.233Z"
 >>>>>>> 9253f1f (Add Web3 content type with wallet integration and Moralis initialization)
+=======
+    "x-generation-date": "2025-01-31T01:58:11.788Z"
+>>>>>>> 4aa237f (Add linting and formatting configuration)
   },
   "x-strapi-config": {
     "plugins": [
