@@ -336,9 +336,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-<<<<<<< HEAD
-export interface ApiUserActivityUserActivity extends Struct.CollectionTypeSchema {
-=======
 export interface ApiTmaUserTmaUser extends Struct.CollectionTypeSchema {
   collectionName: 'tma_users';
   info: {
@@ -372,13 +369,7 @@ export interface ApiTmaUserTmaUser extends Struct.CollectionTypeSchema {
   };
 }
 
-<<<<<<< HEAD
-export interface ApiUserActivityUserActivity
-  extends Struct.CollectionTypeSchema {
->>>>>>> 3cf57c3 (Add TMA user info content type with related schema and documentation)
-=======
 export interface ApiUserActivityUserActivity extends Struct.CollectionTypeSchema {
->>>>>>> 4aa237f (Add linting and formatting configuration)
   collectionName: 'user_activities';
   info: {
     description: '';
@@ -426,9 +417,6 @@ export interface ApiUserActivityUserActivity extends Struct.CollectionTypeSchema
   };
 }
 
-<<<<<<< HEAD
-export interface PluginContentReleasesRelease extends Struct.CollectionTypeSchema {
-=======
 export interface ApiWeb3Web3 extends Struct.CollectionTypeSchema {
   collectionName: 'web3s';
   info: {
@@ -453,13 +441,7 @@ export interface ApiWeb3Web3 extends Struct.CollectionTypeSchema {
   };
 }
 
-<<<<<<< HEAD
-export interface PluginContentReleasesRelease
-  extends Struct.CollectionTypeSchema {
->>>>>>> 9253f1f (Add Web3 content type with wallet integration and Moralis initialization)
-=======
 export interface PluginContentReleasesRelease extends Struct.CollectionTypeSchema {
->>>>>>> 4aa237f (Add linting and formatting configuration)
   collectionName: 'strapi_releases';
   info: {
     displayName: 'Release';
@@ -871,44 +853,8 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
     tg_user_id: Schema.Attribute.String;
     tma_user_info: Schema.Attribute.Relation<'oneToOne', 'api::tma-user.tma-user'>;
     updatedAt: Schema.Attribute.DateTime;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
-=======
-=======
->>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
-    user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
-=======
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    user_activity: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::user-activity.user-activity'
-    >;
-<<<<<<< HEAD
-=======
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
-    user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
->>>>>>> 4aa237f (Add linting and formatting configuration)
-=======
->>>>>>> 59e140d (Add advanced UUID custom field to user schema)
-<<<<<<< HEAD
->>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
-=======
-=======
->>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
->>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
-=======
->>>>>>> 2ea035a (resolve confilict)
     user_id: Schema.Attribute.UID<
       undefined,
       {
@@ -922,25 +868,6 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
           'uuid-format': '^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$';
         }
       >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
-=======
-=======
->>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
-<<<<<<< HEAD
-=======
->>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
->>>>>>> 59e140d (Add advanced UUID custom field to user schema)
-<<<<<<< HEAD
->>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
-=======
-=======
->>>>>>> 86feb98 (Add Web3 content type with wallet integration and Moralis initialization)
->>>>>>> b6c15da (Add Web3 content type with wallet integration and Moralis initialization)
-=======
->>>>>>> 2ea035a (resolve confilict)
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
