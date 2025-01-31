@@ -98,6 +98,7 @@
       "relation": "oneToOne",
       "target": "api::tma-user.tma-user",
       "mappedBy": "user"
+<<<<<<< HEAD
     },
     "user_id": {
       "type": "customField",
@@ -112,6 +113,8 @@
       "relation": "oneToOne",
       "target": "api::web3.web3",
       "mappedBy": "users_permissions_user"
+=======
+>>>>>>> 60ce46c (Add TMA user info content type with related schema and documentation)
     }
   }
 }
