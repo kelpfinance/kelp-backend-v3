@@ -92,6 +92,27 @@
     },
     "country": {
       "type": "string"
+    },
+    "tma_user_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tma-user.tma-user",
+      "mappedBy": "user"
+    },
+    "user_id": {
+      "type": "customField",
+      "options": {
+        "uuid-format": "^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$"
+      },
+      "customField": "plugin::strapi-advanced-uuid.uuid",
+      "required": true
+    },
+    "web_3": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web3.web3",
+      "mappedBy": "users_permissions_user"
+
     }
   }
 }

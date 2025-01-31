@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tma_users",
+  "info": {
+    "singularName": "tma-user",
+    "pluralName": "tma-users",
+    "displayName": "tma user info"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "tma_user_info"
+    },
+    "tma_user_name": {
+      "type": "string"
+    },
+    "battlepasses": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "daily_battlepasses": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "referral_battlepasses": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "last_time_accessed": {
+      "type": "datetime"
+    },
+    "battlepass_streak": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "total_reserved_token": {
+      "type": "float",
+      "default": 0
+    },
+    "total_kelp_points": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "total_kelp_trophies": {
+      "type": "integer",
+      "default": 0
+    },
+    "user_level": {
+      "type": "integer",
+      "default": 1
+    }
+  }
+}

@@ -336,6 +336,39 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTmaUserTmaUser extends Struct.CollectionTypeSchema {
+  collectionName: 'tma_users';
+  info: {
+    displayName: 'tma user info';
+    pluralName: 'tma-users';
+    singularName: 'tma-user';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    battlepass_streak: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    battlepasses: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    daily_battlepasses: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    last_time_accessed: Schema.Attribute.DateTime;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tma-user.tma-user'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    referral_battlepasses: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    tma_user_name: Schema.Attribute.String;
+    total_kelp_points: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    total_kelp_trophies: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    total_reserved_token: Schema.Attribute.Float & Schema.Attribute.DefaultTo<0>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<'oneToOne', 'plugin::users-permissions.user'>;
+    user_level: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
+  };
+}
+
 export interface ApiUserActivityUserActivity extends Struct.CollectionTypeSchema {
   collectionName: 'user_activities';
   info: {
@@ -381,6 +414,30 @@ export interface ApiUserActivityUserActivity extends Struct.CollectionTypeSchema
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user: Schema.Attribute.Relation<'oneToOne', 'plugin::users-permissions.user'>;
+  };
+}
+
+export interface ApiWeb3Web3 extends Struct.CollectionTypeSchema {
+  collectionName: 'web3s';
+  info: {
+    displayName: 'web3';
+    pluralName: 'web3s';
+    singularName: 'web3';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::web3.web3'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    users_permissions_user: Schema.Attribute.Relation<'oneToOne', 'plugin::users-permissions.user'>;
+    wallet: Schema.Attribute.String;
   };
 }
 
@@ -794,9 +851,23 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
     role: Schema.Attribute.Relation<'manyToOne', 'plugin::users-permissions.role'>;
     tg_user_id: Schema.Attribute.String;
+    tma_user_info: Schema.Attribute.Relation<'oneToOne', 'api::tma-user.tma-user'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
+    user_id: Schema.Attribute.UID<
+      undefined,
+      {
+        'uuid-format': '^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$';
+      }
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'uuid-format': '^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$';
+        }
+      >;
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
@@ -805,6 +876,7 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
       }>;
     validation_metrics: Schema.Attribute.JSON;
     wallet: Schema.Attribute.Text;
+    web_3: Schema.Attribute.Relation<'oneToOne', 'api::web3.web3'>;
   };
 }
 
@@ -818,7 +890,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::tma-user.tma-user': ApiTmaUserTmaUser;
       'api::user-activity.user-activity': ApiUserActivityUserActivity;
+      'api::web3.web3': ApiWeb3Web3;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
