@@ -14,7 +14,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
+<<<<<<< HEAD
     "x-generation-date": "2025-01-31T01:52:28.275Z"
+=======
+    "x-generation-date": "2025-01-31T00:28:41.437Z"
+>>>>>>> 754fccf (Add Moralis Web3 library to project dependencies)
   },
   "x-strapi-config": {
     "plugins": [
