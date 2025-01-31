@@ -92,6 +92,12 @@
     },
     "country": {
       "type": "string"
+    },
+    "tma_user_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tma-user.tma-user",
+      "mappedBy": "user"
     }
   }
 }
