@@ -99,6 +99,9 @@
       "target": "api::tma-user.tma-user",
       "mappedBy": "user"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 59e140d (Add advanced UUID custom field to user schema)
     },
     "user_id": {
       "type": "customField",
@@ -107,6 +110,7 @@
       },
       "customField": "plugin::strapi-advanced-uuid.uuid",
       "required": true
+<<<<<<< HEAD
     },
     "web_3": {
       "type": "relation",
@@ -115,6 +119,8 @@
       "mappedBy": "users_permissions_user"
 =======
 >>>>>>> 60ce46c (Add TMA user info content type with related schema and documentation)
+=======
+>>>>>>> 59e140d (Add advanced UUID custom field to user schema)
     }
   }
 }

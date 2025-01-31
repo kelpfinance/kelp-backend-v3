@@ -873,8 +873,15 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
     updatedAt: Schema.Attribute.DateTime;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
+=======
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
+<<<<<<< HEAD
+=======
+>>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
 =======
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -882,10 +889,14 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
       'oneToOne',
       'api::user-activity.user-activity'
     >;
+<<<<<<< HEAD
 =======
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     user_activity: Schema.Attribute.Relation<'oneToOne', 'api::user-activity.user-activity'>;
 >>>>>>> 4aa237f (Add linting and formatting configuration)
+=======
+>>>>>>> 59e140d (Add advanced UUID custom field to user schema)
+>>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
     user_id: Schema.Attribute.UID<
       undefined,
       {
@@ -899,7 +910,14 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
           'uuid-format': '^\\d{3}[a-zA-Z]+-\\d{4}[a-zA-Z]{2}$';
         }
       >;
+<<<<<<< HEAD
 >>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> bfe1165 (Add advanced UUID custom field to user schema)
+>>>>>>> 59e140d (Add advanced UUID custom field to user schema)
+>>>>>>> 4afa6e5 (Add advanced UUID custom field to user schema)
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
