@@ -24,6 +24,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "x-generation-date": "2025-01-31T01:52:28.275Z"
 =======
     "x-generation-date": "2025-01-31T00:28:41.437Z"
@@ -67,6 +68,9 @@
 =======
     "x-generation-date": "2025-01-31T02:01:01.989Z"
 >>>>>>> 2ea035a (resolve confilict)
+=======
+    "x-generation-date": "2025-01-31T02:03:33.878Z"
+>>>>>>> ab61061 (update schema for user)
   },
   "x-strapi-config": {
     "plugins": [
