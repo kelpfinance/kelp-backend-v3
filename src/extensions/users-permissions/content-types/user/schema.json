@@ -106,6 +106,12 @@
       },
       "customField": "plugin::strapi-advanced-uuid.uuid",
       "required": true
+    },
+    "web_3": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web3.web3",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

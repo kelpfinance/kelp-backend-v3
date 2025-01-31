@@ -436,7 +436,41 @@ export interface ApiUserActivityUserActivity
   };
 }
 
+<<<<<<< HEAD
 export interface PluginContentReleasesRelease extends Struct.CollectionTypeSchema {
+=======
+export interface ApiWeb3Web3 extends Struct.CollectionTypeSchema {
+  collectionName: 'web3s';
+  info: {
+    displayName: 'web3';
+    pluralName: 'web3s';
+    singularName: 'web3';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::web3.web3'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    users_permissions_user: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+    wallet: Schema.Attribute.String;
+  };
+}
+
+export interface PluginContentReleasesRelease
+  extends Struct.CollectionTypeSchema {
+>>>>>>> 9253f1f (Add Web3 content type with wallet integration and Moralis initialization)
   collectionName: 'strapi_releases';
   info: {
     displayName: 'Release';
@@ -883,6 +917,7 @@ export interface PluginUsersPermissionsUser extends Struct.CollectionTypeSchema 
       }>;
     validation_metrics: Schema.Attribute.JSON;
     wallet: Schema.Attribute.Text;
+    web_3: Schema.Attribute.Relation<'oneToOne', 'api::web3.web3'>;
   };
 }
 
@@ -898,6 +933,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::tma-user.tma-user': ApiTmaUserTmaUser;
       'api::user-activity.user-activity': ApiUserActivityUserActivity;
+      'api::web3.web3': ApiWeb3Web3;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
