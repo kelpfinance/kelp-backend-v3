@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "kelp_infos",
+  "info": {
+    "singularName": "kelp-info",
+    "pluralName": "kelp-infos",
+    "displayName": "Kelp Info"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "totalKelpReserved": {
+      "type": "float",
+      "default": 0
+    },
+    "totalUsers": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "twitterFollowers": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "youtubeSubscribers": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "telegramMembers": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "tokenHolderCount": {
+      "type": "biginteger",
+      "default": "0"
+    }
+  }
+}
