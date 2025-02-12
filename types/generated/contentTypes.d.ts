@@ -364,6 +364,45 @@ export interface ApiKelpInfoKelpInfo extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMinAppVersionMinAppVersion extends Struct.SingleTypeSchema {
+  collectionName: 'min_app_versions';
+  info: {
+    displayName: 'Min. App Version';
+    pluralName: 'min-app-versions';
+    singularName: 'min-app-version';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Android: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'1.0.0'>;
+    AndroidURL: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'https://play.google.com/store/apps/details?id=com.app.kelpa'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    iOS: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.DefaultTo<'1.0.0'>;
+    iOSURL: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'https://apps.apple.com/us/app/kelp/id1632857274'>;
+    isShowCommunityPledge: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    isUnderMaintenance: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    isUnderPurgeMaintenance: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::min-app-version.min-app-version'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTmaUserTmaUser extends Struct.CollectionTypeSchema {
   collectionName: 'tma_users';
   info: {
@@ -919,6 +958,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::kelp-info.kelp-info': ApiKelpInfoKelpInfo;
+      'api::min-app-version.min-app-version': ApiMinAppVersionMinAppVersion;
       'api::tma-user.tma-user': ApiTmaUserTmaUser;
       'api::user-activity.user-activity': ApiUserActivityUserActivity;
       'api::web3.web3': ApiWeb3Web3;

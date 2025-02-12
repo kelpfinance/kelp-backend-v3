@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "min_app_versions",
+  "info": {
+    "singularName": "min-app-version",
+    "pluralName": "min-app-versions",
+    "displayName": "Min. App Version"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Android": {
+      "type": "string",
+      "default": "1.0.0",
+      "required": true
+    },
+    "iOS": {
+      "type": "string",
+      "required": true,
+      "default": "1.0.0"
+    },
+    "AndroidURL": {
+      "type": "string",
+      "required": true,
+      "default": "https://play.google.com/store/apps/details?id=com.app.kelpa"
+    },
+    "iOSURL": {
+      "type": "string",
+      "default": "https://apps.apple.com/us/app/kelp/id1632857274",
+      "required": true
+    },
+    "isUnderMaintenance": {
+      "type": "boolean",
+      "default": false
+    },
+    "isShowCommunityPledge": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isUnderPurgeMaintenance": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
