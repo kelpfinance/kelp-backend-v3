@@ -403,6 +403,41 @@ export interface ApiMinAppVersionMinAppVersion extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiTmaUserSettingTmaUserSetting extends Struct.SingleTypeSchema {
+  collectionName: 'tma_user_settings';
+  info: {
+    displayName: 'tma-user-setting';
+    pluralName: 'tma-user-settings';
+    singularName: 'tma-user-setting';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    game_settings: Schema.Attribute.JSON;
+    gatekeep_limit: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tma-user-setting.tma-user-setting'
+    > &
+      Schema.Attribute.Private;
+    maintenance_starts: Schema.Attribute.DateTime;
+    mode: Schema.Attribute.Enumeration<['gatekeep', 'waiting', 'maintenance', 'public']> &
+      Schema.Attribute.DefaultTo<'public'>;
+    publishedAt: Schema.Attribute.DateTime;
+    tma_version: Schema.Attribute.Integer;
+    total_users: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'0'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    waiting_ends: Schema.Attribute.DateTime;
+  };
+}
+
 export interface ApiTmaUserTmaUser extends Struct.CollectionTypeSchema {
   collectionName: 'tma_users';
   info: {
@@ -959,6 +994,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::kelp-info.kelp-info': ApiKelpInfoKelpInfo;
       'api::min-app-version.min-app-version': ApiMinAppVersionMinAppVersion;
+      'api::tma-user-setting.tma-user-setting': ApiTmaUserSettingTmaUserSetting;
       'api::tma-user.tma-user': ApiTmaUserTmaUser;
       'api::user-activity.user-activity': ApiUserActivityUserActivity;
       'api::web3.web3': ApiWeb3Web3;
