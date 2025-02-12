@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "tma_user_settings",
+  "info": {
+    "singularName": "tma-user-setting",
+    "pluralName": "tma-user-settings",
+    "displayName": "tma-user-setting"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total_users": {
+      "type": "biginteger",
+      "required": true,
+      "default": "0"
+    },
+    "gatekeep_limit": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "mode": {
+      "type": "enumeration",
+      "enum": [
+        "gatekeep",
+        "waiting",
+        "maintenance",
+        "public"
+      ],
+      "default": "public"
+    },
+    "waiting_ends": {
+      "type": "datetime"
+    },
+    "maintenance_starts": {
+      "type": "datetime"
+    },
+    "tma_version": {
+      "type": "integer"
+    },
+    "game_settings": {
+      "type": "json"
+    }
+  }
+}
