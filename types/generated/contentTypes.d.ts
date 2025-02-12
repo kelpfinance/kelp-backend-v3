@@ -336,6 +336,34 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiKelpInfoKelpInfo extends Struct.SingleTypeSchema {
+  collectionName: 'kelp_infos';
+  info: {
+    displayName: 'Kelp Info';
+    pluralName: 'kelp-infos';
+    singularName: 'kelp-info';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::kelp-info.kelp-info'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    telegramMembers: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    tokenHolderCount: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    totalKelpReserved: Schema.Attribute.Float & Schema.Attribute.DefaultTo<0>;
+    totalUsers: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    twitterFollowers: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
+    youtubeSubscribers: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+  };
+}
+
 export interface ApiTmaUserTmaUser extends Struct.CollectionTypeSchema {
   collectionName: 'tma_users';
   info: {
@@ -890,6 +918,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::kelp-info.kelp-info': ApiKelpInfoKelpInfo;
       'api::tma-user.tma-user': ApiTmaUserTmaUser;
       'api::user-activity.user-activity': ApiUserActivityUserActivity;
       'api::web3.web3': ApiWeb3Web3;
